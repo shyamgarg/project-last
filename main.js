@@ -87,7 +87,7 @@ function draw() {
     fill(250, 0, 0);
     stroke(0, 0, 250);
     strokeWeight(0.5);
-    paddle1Y = mouseY;
+    paddle1Y =  rightWristY;
     rect(paddle1X, paddle1Y, paddle1, paddle1Height, 100);
 
 
@@ -202,11 +202,11 @@ function models() {
 
 //this function help to not go te paddle out of canvas
 function paddleInCanvas() {
-  if (mouseY + paddle1Height > height) {
-    mouseY = height - paddle1Height;
+  if ( paddle1Y + paddle1Height > height) {
+    paddle1Y = height - paddle1Height;
   }
-  if (mouseY < 0) {
-    mouseY = 0;
+  if ( paddle1Y < 0) {
+     paddle1Y = 0;
   }
 }
 function restart() {
